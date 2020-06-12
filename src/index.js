@@ -1,6 +1,13 @@
 import _ from 'lodash';
 import './style.css';
 import Wallpaper from './wallpaper.jpg';
+import Data from './data.xml';
+
+// No warning
+import data from './data.json';
+
+// Warning shown, this is not allowed by the spec.
+// import { foo } from './data.json';
 
 function component() {
     const element = document.createElement('div');
@@ -14,6 +21,9 @@ function component() {
     myIcon.src = Wallpaper;
 
     element.appendChild(myIcon);
+
+    console.log(Data);
+    console.log(data);
 
     return element;
 }
